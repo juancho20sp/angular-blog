@@ -1,0 +1,21 @@
+.home::-webkit-scrollbar {
+    display: none;
+  }
+
+.home {
+    padding-top: 5px;
+
+    height: 92vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    overflow: scroll;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}

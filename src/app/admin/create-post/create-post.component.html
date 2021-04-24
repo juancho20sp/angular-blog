@@ -1,0 +1,65 @@
+<div class="create-post">
+    <mat-card class="card">
+        <h2>Crear post</h2>
+
+        <form [formGroup]="creationForm">
+            <mat-form-field class="input">
+                <mat-label>Título</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <mat-label>Subtítulo</mat-label>
+                <input matInput formControlName="subtitle">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <mat-label>Descripción</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+
+            <div class="input">
+                <input #input type="file" name="file" class="file" (change)="uploadFile($event)">
+            </div>
+
+            <div class="inpu file-container" *ngIf="imageUrl && imageUrl.length">
+                <img [src]="imageUrl" alt="" class="input-img">
+            </div>
+
+            <ng-container *ngIf="!update">
+                <button mat-raised-button class="input" (click)="openDialog()">Crear post!</button>
+            </ng-container>
+
+            <ng-container *ngIf="update">
+                <button mat-raised-button class="input" (click)="openDialogUpdate(firebaseId)">Editar post!</button>
+            </ng-container>
+
+
+        </form>
+    </mat-card>
+
+    <mat-card class="table">
+        <table class="table text-center">
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Acciones</th>
+            </tr>
+            <tbody>
+                <tr *ngFor="let post of allPosts | paginate: config">
+                    <td>{{post.firebaseId}}</td>
+                    <td>{{post.title}}</td>
+                    <td>
+                        <button mat-raised-button color="primary" (click)="setUpdatePost(post)">Editar</button>
+                        <button mat-raised-button color="warn"
+                            (click)="openDialogDelete(post.firebaseId)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pagination-controls (pageChange)="pageChanged($event)" class="ngx-pagination"></pagination-controls>
+
+
+    </mat-card>
+</div>

@@ -1,0 +1,10 @@
+<div class="main-dialog dialog-message">
+    <button mat-button class="close" mat-dialog-close><span class="material-icons">close</span></button>
+    <h2 id="" mat-dialog-title class="text text-thumb" [innerHtml]="title"></h2>
+
+    <div mat-dialog-actions class="">
+        <button mat-raised-button color="warn" *ngIf="btnClose" mat-dialog-close>{{btnClose}}</button>
+
+        <button mat-raised-button color="primary" *ngIf="btnConfirm" (click)="confirm()">{{btnConfirm}}</button>
+    </div>
+</div>

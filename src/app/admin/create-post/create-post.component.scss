@@ -1,0 +1,86 @@
+.create-post::-webkit-scrollbar {
+    display: none;
+  }
+
+.create-post {
+    padding-top: 35px;
+
+    // height: 92vh;
+    width: 100vw;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    overflow: scroll;
+
+    // -ms-overflow-style: none;  /* IE and Edge */
+    // scrollbar-width: none;  /* Firefox */
+
+}
+
+.card {
+  min-width: 60vw;
+  min-height: 60vh;
+
+  display: grid;
+  grid-template: 10% 1fr / 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  // background-color: red;
+  justify-self: center;
+}
+
+form {
+  align-self: flex-start;
+  justify-self: center;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.input {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.file{
+  width: 100%;
+  // height: 85px;
+  margin: auto;
+  margin-bottom: 25px;  
+
+
+}
+
+.file-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.input-img {
+  max-width: 100%;
+  height: 250px;
+
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.table {
+  margin-top: 25px;
+}
+
+.ngx-pagination {
+  text-align: center;
+}
+
