@@ -5,6 +5,7 @@ import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component'
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from '@services/auth/auth.service';
 
 @Component({
   selector: 'app-create-post',
@@ -29,7 +30,8 @@ export class CreatePostComponent implements OnInit {
     private formBuilder: FormBuilder,
     private firebaseService: FirebaseService,
     private storage: AngularFireStorage,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private auth: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -198,6 +200,10 @@ export class CreatePostComponent implements OnInit {
 
   pageChanged(event: any) {
     this.config.currentPage = event;
+  }
+
+  handleLogout() {
+    this.auth.logout();
   }
 }
 

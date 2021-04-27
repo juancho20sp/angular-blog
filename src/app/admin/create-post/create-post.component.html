@@ -34,7 +34,8 @@
                 <button mat-raised-button class="input" (click)="openDialogUpdate(firebaseId)">Editar post!</button>
             </ng-container>
 
-
+            <button mat-raised-button color="warn" class="input logout" (click)="handleLogout()">Cerrar
+                sesión</button>
         </form>
     </mat-card>
 
@@ -59,7 +60,5 @@
         </table>
 
         <pagination-controls (pageChange)="pageChanged($event)" class="ngx-pagination"></pagination-controls>
-
-
     </mat-card>
 </div>

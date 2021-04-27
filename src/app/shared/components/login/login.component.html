@@ -1,0 +1,38 @@
+<div class="login-container">
+    <mat-tab-group class="tabs">
+        <mat-tab label="Iniciar Sesión" class="tab">
+            <mat-card class="card">
+                <form class="form" [formGroup]="loginForm">
+                    <mat-form-field class="input">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+
+                    <mat-form-field class="input">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput formControlName="password">
+                    </mat-form-field>
+
+                    <button mat-raised-button class="input" (click)="signIn()">Iniciar sesión</button>
+                </form>
+            </mat-card>
+        </mat-tab>
+        <mat-tab label="Crear cuenta">
+            <mat-card class="card">
+                <form class="form" [formGroup]="loginForm">
+                    <mat-form-field class="input">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+
+                    <mat-form-field class="input">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput formControlName="password">
+                    </mat-form-field>
+
+                    <button mat-raised-button class="input" (click)="signUp()">Crear cuenta</button>
+                </form>
+            </mat-card>
+        </mat-tab>
+    </mat-tab-group>
+</div>

@@ -1,0 +1,45 @@
+.login-container{
+    // background-color: rebeccapurple;
+    min-width: 60vw;
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-tab-labels {
+    background: red;
+}
+
+.tabs {
+    // background-color: rosybrown;
+    
+    width: 50vw;
+    height: 50vh;
+
+
+}
+.mat-form-field-wrapper {
+    margin-top: 15px  !important;
+}
+
+.tab {
+    height: 100%;
+}
+
+.card {
+    // background-color: red;
+    // height: 100%;
+    // padding-top: 10px;
+
+    
+  }
+
+  .form {
+      margin-top: 10px;
+    display: grid;
+    grid-template: 10% 1fr / 1fr;
+    justify-content: center;
+    align-items: center;
+  }

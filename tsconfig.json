@@ -14,6 +14,9 @@
       ],
       "@components/*": [
         "src/app/shared/components/*"
+      ],
+      "@guards/*": [
+        "src/app/shared/guards/*"
       ]
     },
     "baseUrl": "./",
